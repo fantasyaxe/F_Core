@@ -1,12 +1,6 @@
-plugins {
-    id("java")
+tasks.register("printVersion") {
+	val ver = project.version
+	doFirst {
+		println(ver)
+	}
 }
-
-group = "delta.cion"
-version = "0.0.0-DEV"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {}
