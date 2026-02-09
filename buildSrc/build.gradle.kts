@@ -1,9 +1,13 @@
 plugins {
-	id("java")
-	id("com.gradleup.shadow") version("8.3.0")
+	`kotlin-dsl`
+	`kotlin-dsl-precompiled-script-plugins`
 }
 
 repositories {
 	mavenCentral()
 	gradlePluginPortal()
+}
+
+fun Provider<MinimalExternalModuleDependency>.withVersion(version: String): Provider<String> {
+	return map { "${it.module.group}:${it.module.name}:$version" }
 }

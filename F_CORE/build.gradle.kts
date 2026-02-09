@@ -1,4 +1,3 @@
 plugins {
-	id("java-gradle-plugin")
-    id("java")
+	id("config-java")
 }

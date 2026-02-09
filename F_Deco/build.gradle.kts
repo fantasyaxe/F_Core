@@ -1,12 +1,3 @@
 plugins {
-    id("java")
+	id("config-java")
 }
-
-group = "delta.cion"
-version = "0.0.0-DEV"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {}

@@ -9,11 +9,6 @@ java {
 	withSourcesJar()
 }
 
-tasks.withType(JavaCompile::class).configureEach {
-	options.release = 21
-	options.encoding = "UTF-8"
-}
-
 repositories {
 	mavenCentral {
 		mavenContent { releasesOnly() }
@@ -30,10 +25,16 @@ configurations.all {
 	dependencies.remove(project.dependencies.gradleApi())
 }
 
-tasks.jar {
-	manifest {
-		attributes(
-			"Implementation-Version" to project.version
-		)
+tasks {
+	jar {
+		manifest {
+			attributes(
+				"Implementation-Version" to project.version
+			)
+		}
+	}
+	withType(JavaCompile::class).configureEach {
+		options.release = 21
+		options.encoding = "UTF-8"
 	}
 }
