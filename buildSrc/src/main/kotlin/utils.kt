@@ -15,8 +15,9 @@ fun Configuration.compatibilityAttributes(objects: ObjectFactory) {
 }
 
 fun GradlePluginDevelopmentExtension.setupPlugin(prefix: String, op: Action<PluginDeclaration>) {
-	plugins.register("F_$prefix") {
-		id = "delta.cion." + prefix
-		displayName = "paperweight $prefix"
+	plugins.register(prefix) {
+		id = "delta.cion.$prefix"
+		displayName = prefix
+		op.execute(this)
 	}
 }

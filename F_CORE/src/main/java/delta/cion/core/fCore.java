@@ -1,6 +1,6 @@
-package delta.cion;
+package delta.cion.core;
 
-public class Main {
+public class fCore {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }

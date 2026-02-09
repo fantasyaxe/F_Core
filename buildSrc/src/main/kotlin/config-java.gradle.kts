@@ -36,5 +36,7 @@ tasks {
 	withType(JavaCompile::class).configureEach {
 		options.release = 21
 		options.encoding = "UTF-8"
+
+		println("Ave citory!")
 	}
 }

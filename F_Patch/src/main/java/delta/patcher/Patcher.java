@@ -1,6 +1,6 @@
-package delta.cion;
+package delta.patcher;
 
-public class Main {
+public class Patcher {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
